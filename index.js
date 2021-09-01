@@ -14,6 +14,14 @@ module.exports = function (babel) {
           return a.operatorSub ? a.operatorSub(b) : a - b
         },
 
+        neg(a) {
+          return a.operatorNeg
+            ? a.operatorNeg()
+            : a.operatorMul
+            ? a.operatorMul(-1)
+            : -a
+        },
+
         mul(a, b) {
           return a.operatorMul ? a.operatorMul(b) : a * b
         },
@@ -92,14 +100,6 @@ module.exports = function (babel) {
           else if (b.operatorNotEqual) return b.operatorNotEqual(a)
           else if (b.operatorEqual) return !b.operatorEqual(a)
           else return a != b
-        },
-
-        unaryNegation(a) {
-          return a.operatorUnaryNegation
-            ? a.operatorUnaryNegation()
-            : a.operatorMul
-            ? a.operatorMul(-1)
-            : -a
         },
       }
     })()
@@ -193,7 +193,7 @@ module.exports = function (babel) {
         }
 
         var tab = {
-          '-': 'unaryNegation',
+          '-': 'neg',
         }
 
         let method = tab[path.node.operator]

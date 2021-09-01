@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-operator-enhance",
-  "version": "0.3.18",
+  "version": "0.4.8",
   "description": "",
   "main": "index.js",
   "scripts": {

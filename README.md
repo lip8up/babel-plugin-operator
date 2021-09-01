@@ -107,6 +107,7 @@ After that, all you need to do is to insert a certain function into your class, 
 ``` javascript
 '+': 'operatorAdd',
 '-': 'operatorSub',
+'-': 'operatorNeg', // prefix -
 '*': 'operatorMul',
 '/': 'operatorDiv',
 '**': 'operatorPow',
@@ -123,9 +124,6 @@ After that, all you need to do is to insert a certain function into your class, 
 '>=': 'operatorGreaterEqual',
 '==': 'operatorEqual',
 '!=': 'operatorNotEqual',
-
-// prefix -
-'-': 'unaryNegation',
 ```
 
 For example, `a + b` will be redirected to `a.operatorAdd(b)`. If `a` doesn't have a function named `operatorAdd`, the operator falls back to the original `+`.
@@ -161,8 +159,8 @@ The way to do this is to add a string in front of the function body as a mark:
 
 ``` javascript
 function foo() {
-	'bpo disable';
-    //your code
+  'bpo disable';
+  // your code
 }
 ```
 
