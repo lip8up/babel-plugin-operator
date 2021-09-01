@@ -90,7 +90,7 @@ And configure your `.babelrc`.
 ``` javascript
 {
   "presets": ["es2015", "stage-2"],
-  "plugins": ["operator"]
+  "plugins": ["operator-enhance"]
 }
 ```
 
