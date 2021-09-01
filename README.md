@@ -1,4 +1,4 @@
-# babel-plugin-operator
+# babel-plugin-operator-enhance
 
 ## Description
 This is a [babel](https://github.com/babel/babel) plugin that adds operator overloading into javascript.
@@ -76,7 +76,13 @@ First you should make your [babel](https://github.com/babel/babel) working.
 And install the package.
 
 ```
-npm install babel-plugin-operator --save
+npm install babel-plugin-operator-enhance --save-dev
+```
+
+or
+
+```
+yarn add --dev babel-plugin-operator-enhance
 ```
 
 And configure your `.babelrc`.
