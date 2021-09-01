@@ -117,6 +117,9 @@ After that, all you need to do is to insert a certain function into your class, 
 '>=': 'operatorGreaterEqual',
 '==': 'operatorEqual',
 '!=': 'operatorNotEqual',
+
+// prefix -
+'-': 'unaryNegation',
 ```
 
 For example, `a + b` will be redirected to `a.operatorAdd(b)`. If `a` doesn't have a function named `operatorAdd`, the operator falls back to the original `+`.
